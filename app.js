@@ -36,6 +36,10 @@ async function handleCategoryButton(item_categoryId) {
     if (allData.length > 0) {
         const spinner = document.getElementById('loading-spinner');
         spinner.classList.add('hidden')
+
+        const noData = document.getElementById('no_data');
+        noData.classList.add('hidden')
+        noData.classList.remove('flex');
         
     }else if(allData.length == 0){
         const noData = document.getElementById('no_data');
@@ -55,7 +59,7 @@ async function handleCategoryButton(item_categoryId) {
         const div = document.createElement('div');
         div.innerHTML = `<div class="mb-3 border-red-500 flex justify-center border rounded-lg w-2/3 ml-56  shadow-lg shadow-black gap-y-2">
              <div class="w-full flex items-center justify-center">
-                <img src="Resources/unsplash_EhTcC9sYXsw.png" alt="">
+                <img src="${item.image_url}" alt="">
             </div>
              <div class="">
 
@@ -68,11 +72,11 @@ async function handleCategoryButton(item_categoryId) {
 
                     <div class="flex items-center  gap-1">
                         <img src="Resources/Rectangle 19.png" alt="">
-                        <p>jene cooper</p>
+                        <p>${item.author.name}</p>
                     </div>
 
                     <div class="flex items-center">
-                        <img src="Resources/carbon_view.png" alt="">
+                        <img src="${item.author}" alt="">
                         <p>1.5M</p>
                     </div>
 
