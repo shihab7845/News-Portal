@@ -1,77 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Portal</title>
-        <!-- tailwind -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- daisyui -->
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
+
 <body>
-        <!-- navigation bar -->
-  
-        <nav class="w-full h-20 border border-red-700">
+    <!-- navigation bar -->
 
-        </nav>
+    <nav id="news_nav" class="flex justify-around items-center w-full h-20 border border-red-700 gap-2">
 
-                <!-- search section -->
+    </nav>
+
+    <!-- search section -->
     <section class="my-14 border border-red-600 bg-neutral-700">
-       <div class="flex justify-center items-center ">
-        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
-        <button class="btn btn-accent">Accent</button>
-       </div>
+        <div class="flex justify-center items-center ">
+            <input id="input_value" type="text" placeholder="search here" class="input input-bordered w-full max-w-xs" />
+            <button onclick="handleBtn()" class="btn btn-accent">search</button>
+        </div>
     </section>
 
-                 <!-- news display -->
-
-    <div class="flex justify-center border rounded-lg w-2/3 ml-56  shadow-lg shadow-black ">
-             <div class=" w-full flex items-center justify-center">
-                <img src="Resources/unsplash_EhTcC9sYXsw.png" alt="">
-            </div>
-             <div class="">
-
-                <h2 class="text-xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae iusto deleniti  </h2>
-
-                <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae iusto deleniti maiores, delectus quidem! Eius, dolores nostrLorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae iusto deleniti maiores, delectus quidem! Eius, dolores nostrum? Rerum similique adipisci</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus beatae iusto deleniti maiores, delectus quidem! Eius, dolores nostrum? Rerum similique adipisci</p>
-
-                <div class="flex items-center justify-around mt-3">
-
-                    <div class="flex items-center  gap-1">
-                        <img src="Resources/Rectangle 19.png" alt="">
-                        <p>jene cooper</p>
-                    </div>
-
-                    <div class="flex items-center">
-                        <img src="Resources/carbon_view.png" alt="">
-                        <p>1.5M</p>
-                    </div>
-
-                    <!-- rating -->
-                     <div>
-                        <div class="rating">
-                            <input type="radio" name="rating-1" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" checked />
-                            <input type="radio" name="rating-1" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" />
-                            <input type="radio" name="rating-1" class="mask mask-star" />
-                          </div>
-                     </div>
-
-                </div>
-
-
-            
-            </div>
+    <!-- news display -->
+    <div id="display_news" >
+        
     </div>
-   
-   </div>
+
+        <div id="loading-spinner" class=" justify-center items-center hidden">
+           <img src="Resources/icegif-1263.gif" alt="">
+        </div>
+
+        <div id="no_data" class=" justify-center items-center hidden">
+           <img src="Resources/images.png" alt="">
+        </div>
+
+    </div>
 </body>
 <script src="app.js"></script>
+
 </html>
